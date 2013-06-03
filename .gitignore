@@ -6,6 +6,8 @@
 # Packages
 *.egg
 *.egg-info
+*.pyc
+*.bak
 dist
 build
 eggs
