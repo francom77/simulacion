@@ -95,3 +95,48 @@ class Corrida:
 				self.svnr+=1	
 
 		return resul
+
+
+	def realizarCorrida(self):
+
+		while t <= tf:
+			
+			self.tps.sort()
+
+			if (tpll <= tps[0]):
+				stp = stp + (tpll - t) * ns
+				t = tpll
+				ia = self.generarIA()
+				tpll = t + ia
+
+				arr = self.tratarArrepentimiento()
+
+				if arr:
+					ns += 1
+					n += 1
+
+					if ns <= remises:
+						tv = self.generarTV()
+						stv += tv
+						tps[0] = t + tv
+						sto = sto + (t - cto) * (remises - ns)
+
+			else:
+				stp = stp + (tps[0] - t) * ns
+				t = tps[0]
+				ns -= 1
+
+				if ns <= remises:
+					tv = self.generarTV()
+					stv += tv
+					tps[0] = t + tv
+				else:
+					cto = t
+					tps[0] = 400000 #un valor muy grande
+
+		#calculo de resultados
+		pte = (stp - stv) / remises
+		pvnr = (svnr * 100) / (n + svnr)
+		pto = (pto * 100) / t
+
+
