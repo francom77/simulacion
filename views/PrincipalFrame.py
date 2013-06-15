@@ -20,15 +20,15 @@ class PrincipalFrame(wx.Frame):
         kwds["style"] = wx.DEFAULT_FRAME_STYLE
         wx.Frame.__init__(self, *args, **kwds)
         self.panel_1 = wx.Panel(self, wx.ID_ANY)
-        self.label_1 = wx.StaticText(self.panel_1, wx.ID_ANY, _("Simulacion: Remiseria"))
-        self.label_2 = wx.StaticText(self.panel_1, wx.ID_ANY, _("Datos:"))
-        self.label_2_copy = wx.StaticText(self.panel_1, wx.ID_ANY, _("Cantidad de Remises:"))
+        self.label_1 = wx.StaticText(self.panel_1, wx.ID_ANY, ("Simulacion: Remiseria"))
+        self.label_2 = wx.StaticText(self.panel_1, wx.ID_ANY, ("Datos:"))
+        self.label_2_copy = wx.StaticText(self.panel_1, wx.ID_ANY, ("Cantidad de Remises:"))
         self.remises = wx.SpinCtrl(self.panel_1, wx.ID_ANY, "", min=0, max=100)
-        self.label_2_copy_copy = wx.StaticText(self.panel_1, wx.ID_ANY, _("Cantidad de Corridas:"))
+        self.label_2_copy_copy = wx.StaticText(self.panel_1, wx.ID_ANY, ("Cantidad de Corridas:"))
         self.Corridas = wx.SpinCtrl(self.panel_1, wx.ID_ANY, "", min=0, max=100)
-        self.simular = wx.Button(self.panel_1, wx.ID_ANY, _("Simular"))
-        self.graficos = wx.Button(self.panel_1, wx.ID_ANY, _("Ver Graficos..."))
-        self.label_2_copy_1 = wx.StaticText(self.panel_1, wx.ID_ANY, _("Resultados:"))
+        self.simular = wx.Button(self.panel_1, wx.ID_ANY, ("Simular"))
+        self.graficos = wx.Button(self.panel_1, wx.ID_ANY, ("Ver Graficos..."))
+        self.label_2_copy_1 = wx.StaticText(self.panel_1, wx.ID_ANY, ("Resultados:"))
         self.resultados = wx.ListCtrl(self.panel_1, wx.ID_ANY, style=wx.LC_REPORT | wx.SUNKEN_BORDER)
 
         self.__set_properties()
@@ -37,7 +37,7 @@ class PrincipalFrame(wx.Frame):
 
     def __set_properties(self):
         # begin wxGlade: PrincipalFrame.__set_properties
-        self.SetTitle(_("frame_1"))
+        self.SetTitle(("Simulacion"))
         self.label_1.SetFont(wx.Font(18, wx.MODERN, wx.NORMAL, wx.BOLD, 0, "Calibri"))
         self.label_2.SetFont(wx.Font(14, wx.MODERN, wx.NORMAL, wx.BOLD, 0, "Calibri"))
         self.label_2_copy.SetMinSize((180, 23))
