@@ -49,17 +49,17 @@ class Corrida:
 
     def generarDE(self):
 
-        if self.ns < 5:
+        if  (self.remises - self.ns) < 5:
             de = 25
-        elif self.ns < 10:
+        elif (self.remises - self.ns) < 10:
             de = 20
-        elif self.ns < 15:
+        elif (self.remises - self.ns) < 15:
             de = 15
-        elif self.ns < 20:
+        elif (self.remises - self.ns) < 20:
             de = 10
-        elif self.ns < 25:
+        elif (self.remises - self.ns) < 25:
             de = 5
-        elif self.ns >= 25:
+        elif (self.remises - self.ns) >= 25:
             de = 3
 
         return de
@@ -137,6 +137,6 @@ class Corrida:
         #calculo de resultados
         self.pte = (self.stp - self.stv) / self.n
         self.pvnr = (self.svnr * 100) / (self.n + self.svnr)
-        self.pto = (self.sto / 365*60) / self.remises
+        self.pto = ((self.sto / 365)/60) / self.remises
 
 
