@@ -26,8 +26,8 @@ class Controller:
         lista.InsertColumn(3, "Cant. de Viajes no Realizados", width=200)
         lista.InsertColumn(4, "Prom. Tiempo de Espera", width=200)
 
-        self.window.Corridas.SetValue(30)
-        self.window.remises.SetValue(25)
+        self.window.Corridas.SetValue(5)
+        self.window.remises.SetValue(5)
 
     def connectEvent(self):
 
